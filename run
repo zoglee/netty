@@ -1,0 +1,6 @@
+#!/bin/bash
+
+LOG_DIR="./log"
+mkdir -p $LOG_DIR
+rm -f $LOG_DIR/*
+./netty -stderrthreshold=FATAL -debug=false -port=8080 -log_dir="$LOG_DIR"
